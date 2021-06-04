@@ -4,17 +4,20 @@ import classes from "./MainNavigation.module.css";
 function MainNavgation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>React Meetups</div>
+      <div className={classes.logo}>Vetooze</div>
       <nav>
         <ul>
           <li>
-            <Link to="/">All Meetups</Link>
+            <Link to="/">For Pet Owners</Link>
           </li>
           <li>
-            <Link to="/new-meetup">Add New Meetup</Link>
+            <Link to="/new-meetup">For Techs</Link>
           </li>
           <li>
             <Link to="/favorites">My favorites</Link>
+          </li>
+          <li>
+            <Link to="/new-meetup">Contact Us</Link>
           </li>
         </ul>
       </nav>

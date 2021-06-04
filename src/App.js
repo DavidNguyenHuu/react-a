@@ -1,20 +1,14 @@
-import Todo from "./components/Todo";
 import { Route, Switch } from "react-router-dom";
 import AllMeetupsPage from "./pages/AllMeetups";
 import NewMeetupPage from "./pages/NewMeetups";
 import FavoritesPage from "./pages/Favorites";
 
-import MainNavgation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div>
-      <MainNavgation />
-      <h1>David's to-do list</h1>
-      <Todo text="Item 1" />
-      <Todo text="Item 2" />
-      <Todo text="Item 3"></Todo>
-      <switch>
+    <Layout>
+      <Switch>
         <Route path="/" exact>
           <AllMeetupsPage />
         </Route>
@@ -24,8 +18,8 @@ function App() {
         <Route path="/favorites">
           <FavoritesPage />
         </Route>
-      </switch>
-    </div>
+      </Switch>
+    </Layout>
   );
 }
 
